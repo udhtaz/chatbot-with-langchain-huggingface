@@ -1,5 +1,5 @@
 import io
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
 from app.config import load_config
 from app.utils import get_gem_pdf, get_worldbank_data
@@ -25,5 +25,9 @@ def create_app():
         logging.info("Downloading GEM PDF...")
         pdf_url = "https://gemconsortium.org/file/open?fileId=51377"
         get_gem_pdf(pdf_url)
+
+    @app.route('/health_check' , methods=['GET'])
+    def health_check():
+        return jsonify({"status": "ok"}), 200
 
     return app

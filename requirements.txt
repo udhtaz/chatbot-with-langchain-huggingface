@@ -29,3 +29,5 @@ bitsandbytes
 accelerate
 pandas-datareader
 pdfplumber
+pytest
+pytest-flask
