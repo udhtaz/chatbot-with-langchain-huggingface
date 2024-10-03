@@ -46,7 +46,9 @@ You can manually build and run the Docker container:
 After installing the requirements, you can run the app locally with Python.
 `python run.py`
 
-The app will be accessible on http://localhost:80.
+## Running Tests:
+You can execute the below command to run the tests on the app functionality.
+`pytest`
 
 How It Works
 Initialization: On startup, the app fetches World Bank data and downloads a GEM report PDF. These processes are triggered automatically from the create_app function in the Flask app's initialization.
